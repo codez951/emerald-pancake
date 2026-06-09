@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://cyvrj57sg3wcy" path="res://assets/textures/blue_square.png" id="1_0sial"]
 [ext_resource type="Script" uid="uid://0rcanudnbcr6" path="res://scripts/blue_square.gd" id="1_vtdtj"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtdtj"]
+size = Vector2(66, 70)
+
 [node name="BlueSquare" type="CharacterBody2D" unique_id=2113902209]
 position = Vector2(957, 758)
 script = ExtResource("1_vtdtj")
@@ -12,3 +15,7 @@ position = Vector2(1.335144e-05, 0.9999933)
 scale = Vector2(0.25142047, 0.26812977)
 texture = ExtResource("1_0sial")
 metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1461171020]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_vtdtj")

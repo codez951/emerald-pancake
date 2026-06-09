@@ -6,7 +6,7 @@ var speed: float = 500
 
 
 func _physics_process(delta: float) -> void:
-	direction = direction.normalized()
+	direction = Vector2.ZERO
 	
 	if Input.is_action_pressed("character_up"):
 		direction += Vector2(0, -1)
@@ -17,5 +17,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("character_left"):
 		direction += Vector2(-1, 0)
 	
+	
+	direction = direction.normalized()
 	velocity = speed * direction
 	move_and_slide()
