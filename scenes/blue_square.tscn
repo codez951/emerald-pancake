@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://dlpuc3b7su4xl"]
 
 [ext_resource type="Texture2D" uid="uid://cyvrj57sg3wcy" path="res://assets/textures/blue_square.png" id="1_0sial"]
+[ext_resource type="Script" uid="uid://0rcanudnbcr6" path="res://scenes/blue_square.gd" id="1_vtdtj"]
 
 [node name="BlueSquare" type="CharacterBody2D" unique_id=2113902209]
-position = Vector2(305, 290)
+position = Vector2(957, 758)
+script = ExtResource("1_vtdtj")
 
 [node name="BlueSquareBody" type="Sprite2D" parent="." unique_id=1320247973]
-position = Vector2(9.536743e-06, -1.1444092e-05)
-scale = Vector2(0.24810605, 0.24045804)
+position = Vector2(1.335144e-05, 0.9999933)
+scale = Vector2(0.25142047, 0.26812977)
 texture = ExtResource("1_0sial")
+metadata/_edit_group_ = true
