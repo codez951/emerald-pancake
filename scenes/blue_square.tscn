@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dlpuc3b7su4xl"]
 
 [ext_resource type="Texture2D" uid="uid://cyvrj57sg3wcy" path="res://assets/textures/blue_square.png" id="1_0sial"]
-[ext_resource type="Script" uid="uid://0rcanudnbcr6" path="res://scenes/blue_square.gd" id="1_vtdtj"]
+[ext_resource type="Script" uid="uid://0rcanudnbcr6" path="res://scripts/blue_square.gd" id="1_vtdtj"]
 
 [node name="BlueSquare" type="CharacterBody2D" unique_id=2113902209]
 position = Vector2(957, 758)
