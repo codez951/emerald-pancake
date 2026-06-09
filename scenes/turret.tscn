@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b3un88wpigo6n"]
+
+[ext_resource type="Script" uid="uid://drykrdronu68n" path="res://scripts/turret.gd" id="1_el7wl"]
+[ext_resource type="Texture2D" uid="uid://d3pgxpyolhuwi" path="res://assets/textures/blue_tank_head.png" id="1_x3mc5"]
+
+[node name="Turret" type="Node2D" unique_id=373752317]
+position = Vector2(267, 227)
+script = ExtResource("1_el7wl")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476250153]
+position = Vector2(0, 1.0000038)
+scale = Vector2(0.2, 0.218)
+texture = ExtResource("1_x3mc5")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1709075416]
+position = Vector2(0, -61)

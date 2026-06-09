@@ -10,12 +10,12 @@ size = Vector2(66, 70)
 position = Vector2(957, 758)
 script = ExtResource("1_vtdtj")
 
-[node name="BlueSquareBody" type="Sprite2D" parent="." unique_id=1320247973]
+[node name="BlueSquareBodydy" type="Sprite2D" parent="." unique_id=1320247973]
 position = Vector2(1.335144e-05, 0.9999933)
 scale = Vector2(0.25142047, 0.26812977)
 texture = ExtResource("1_0sial")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1461171020]
+[node name="HitBox" type="CollisionShape2D" parent="." unique_id=1461171020]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_vtdtj")
