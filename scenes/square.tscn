@@ -7,11 +7,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtdtj"]
 size = Vector2(66, 70)
 
-[node name="BlueSquare" type="CharacterBody2D" unique_id=2113902209]
+[node name="Square" type="CharacterBody2D" unique_id=2113902209]
 position = Vector2(899, 765)
 script = ExtResource("1_vtdtj")
 
-[node name="BlueSquareBody" type="Sprite2D" parent="." unique_id=1320247973]
+[node name="SquareBody" type="Sprite2D" parent="." unique_id=1320247973]
 position = Vector2(-1, -1)
 scale = Vector2(0.3905066, 0.40291008)
 texture = ExtResource("1_0sial")
