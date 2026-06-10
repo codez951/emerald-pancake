@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("fire"):
 		print("Fire")
 		
-	player_shape.move_to(direction)
+	player_shape.move_in_direction(direction)
 
 
 func _process(delta: float) -> void:
@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 	var error: Vector2 = mouse_pos - turret_pos
 	var angle: float = atan2(error.y, error.x)
 	
-	player_shape.get_node("Turret").turret_movement(angle)
+	player_shape.get_node("Turret").turret_aiming_direction(angle)
 
 
 func form_loader():

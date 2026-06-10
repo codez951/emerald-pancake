@@ -1,5 +1,5 @@
 extends Node2D
 
 
-func turret_movement(rotate_by):
+func turret_aiming_direction(rotate_by):
 	rotation = rotate_by
