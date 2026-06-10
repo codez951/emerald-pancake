@@ -1,3 +1,24 @@
 [gd_scene format=3 uid="uid://ds7kx40331s2e"]
 
+[ext_resource type="Script" uid="uid://cev1oqbh3pp53" path="res://scripts/triangle.gd" id="1_u1wel"]
+[ext_resource type="Texture2D" uid="uid://dm6gtyqci12hc" path="res://assets/textures/blue_triangle.png" id="1_yqcrn"]
+[ext_resource type="PackedScene" uid="uid://b3un88wpigo6n" path="res://scenes/turret.tscn" id="2_h7xi0"]
+
 [node name="Triangle" type="CharacterBody2D" unique_id=168054158]
+position = Vector2(894, 650)
+script = ExtResource("1_u1wel")
+metadata/_edit_group_ = true
+
+[node name="TriangleBody" type="Sprite2D" parent="." unique_id=734389914]
+position = Vector2(-1, 0)
+scale = Vector2(0.391, 0.391)
+texture = ExtResource("1_yqcrn")
+
+[node name="HitBox" type="CollisionPolygon2D" parent="." unique_id=1557613220]
+position = Vector2(-0.6090088, 0)
+scale = Vector2(0.391, 0.391)
+polygon = PackedVector2Array(-4, -130, 130, 130, -133, 130)
+
+[node name="Turret" parent="." unique_id=373752317 instance=ExtResource("2_h7xi0")]
+position = Vector2(-1.0000154, 6.0000043)
+scale = Vector2(0.7, 0.7)
