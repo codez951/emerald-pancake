@@ -25,6 +25,7 @@ func _physics_process(delta: float) -> void:
 		direction += Vector2(-1, 0)
 	if Input.is_action_just_pressed("fire"):
 		print("Fire")
+		player_shape.get_node("Turret").fire("player")
 		
 	player_shape.move_in_direction(direction)
 
