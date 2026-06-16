@@ -2,7 +2,7 @@ extends Node2D
 
 
 var direction: Vector2 = Vector2.ZERO
-var player_form: String = "triangle"
+var player_form: String = "square"
 var player_shape: CharacterBody2D
 var triangle: PackedScene = preload("res://scenes/triangle.tscn")
 var square: PackedScene = preload("res://scenes/square.tscn")

@@ -16,6 +16,6 @@ func fire(firing_team):
 	
 	if firing_team == "player":
 		bullet.get_node("BulletTexture").texture = blue_bullet_texture
-		print(get_node("BulletSpawnPoint").global_position)
-		bullet.global_position = get_node("BulletSpawnPoint").global_position
-		add_child(bullet)
+		get_tree().root.add_child(bullet)
+		bullet.global_position = turret_head
+		bullet.launch(global_rotation)
