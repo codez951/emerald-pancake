@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://da0msg2erpcpy"]
+
+[ext_resource type="Script" uid="uid://dws7k4pleyhu7" path="res://scripts/generic_character.gd" id="1_agfs1"]
+
+[node name="GenericCharacter" type="CharacterBody2D" unique_id=604976356]
+script = ExtResource("1_agfs1")

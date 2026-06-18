@@ -12,7 +12,7 @@ func _ready() -> void:
 	form_loader()
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	direction = Vector2.ZERO
 	
 	if Input.is_action_pressed("character_up"):
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 	player_shape.move_in_direction(direction)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var mouse_pos: Vector2 = get_global_mouse_position()
 	var turret_pos: Vector2 = player_shape.get_node("Turret").global_position
 	var error: Vector2 = mouse_pos - turret_pos
