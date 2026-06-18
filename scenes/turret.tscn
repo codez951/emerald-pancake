@@ -13,3 +13,9 @@ texture = ExtResource("1_x3mc5")
 
 [node name="BulletSpawnPoint" type="Marker2D" parent="." unique_id=1709075416]
 position = Vector2(80, 1)
+
+[node name="ReloadTimer" type="Timer" parent="." unique_id=1293172877]
+wait_time = 0.33
+one_shot = true
+
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]
