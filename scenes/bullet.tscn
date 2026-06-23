@@ -18,3 +18,5 @@ texture = ExtResource("1_mkf8s")
 [node name="BulletCollisionShape" type="CollisionShape2D" parent="." unique_id=160071691]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_mkf8s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

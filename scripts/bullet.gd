@@ -24,3 +24,9 @@ func launch(angle):
 func _physics_process(delta: float) -> void:
 	if launch_state:
 		global_position += speed * direction * delta
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is GenericCharacter:
+		if body.team != team:
+			queue_free()
