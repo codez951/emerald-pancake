@@ -1,5 +1,5 @@
 extends GenericCharacter
 
-
-var hp: float
-var attack: float
+func setup():
+    hp = 500
+    atk = 200

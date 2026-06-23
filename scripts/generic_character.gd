@@ -8,6 +8,8 @@ var triangle: PackedScene = preload("res://scenes/triangle.tscn")
 var square: PackedScene = preload("res://scenes/square.tscn")
 var direction: Vector2 = Vector2.ZERO
 var speed: float = 500
+var hp: float
+var atk: float
 
 
 func move_in_direction(dir: Vector2):

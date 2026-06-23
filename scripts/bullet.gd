@@ -1,6 +1,8 @@
 class_name Bullet
 extends Area2D
 
+signal bullet_hit
+
 
 var team: String
 var speed: float = 5000
@@ -29,4 +31,5 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is GenericCharacter:
 		if body.team != team:
+			bullet_hit.emit()
 			queue_free()
