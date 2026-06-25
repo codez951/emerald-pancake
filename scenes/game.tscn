@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cjqaiepk7umxt"]
 
-[ext_resource type="PackedScene" uid="uid://cvc11vxewctbq" path="res://scenes/player_controller.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://da0msg2erpcpy" path="res://scenes/character.tscn" id="1_uwrxv"]
 
 [node name="Game" type="Node2D" unique_id=1930902502]
 
-[node name="PlayerController" parent="." unique_id=347659636 instance=ExtResource("1_uwrxv")]
+[node name="PlayerCharacter" parent="." unique_id=604976356 instance=ExtResource("1_uwrxv")]
+
+[editable path="PlayerCharacter"]

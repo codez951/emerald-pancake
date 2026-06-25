@@ -16,3 +16,6 @@ script = ExtResource("1_agfs1")
 [node name="Turret" parent="." unique_id=373752317 instance=ExtResource("3_lrhn5")]
 
 [connection signal="direction_input" from="PlayerController" to="." method="_on_player_controller_direction_input"]
+[connection signal="fire_shot" from="PlayerController" to="." method="_on_player_controller_fire_shot"]
+[connection signal="form_change" from="PlayerController" to="." method="form_changer"]
+[connection signal="look_at_input" from="PlayerController" to="." method="_on_player_controller_look_at_input"]
