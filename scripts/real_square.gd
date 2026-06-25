@@ -1,5 +1,5 @@
 extends GenericCharacter
 
-func setup():
+func setup() -> void:
 	hp = 1000
 	atk = 100

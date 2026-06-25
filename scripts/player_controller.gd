@@ -1,12 +1,17 @@
 extends Node2D
 
 
-var team = "player"
+signal direction_input
+signal look_at_input
+signal form_change
+
+
+var team: String = "player"
 var direction: Vector2 = Vector2.ZERO
 var player_form: String = "square"
 var player_shape: CharacterBody2D
-var triangle: PackedScene = preload("res://scenes/triangle.tscn")
-var square: PackedScene = preload("res://scenes/square.tscn")
+var triangle: PackedScene = preload("res://scenes/real_triangle.tscn")
+var square: PackedScene = preload("res://scenes/real_square.tscn")
 
 
 func _ready() -> void:
@@ -17,13 +22,13 @@ func _physics_process(_delta: float) -> void:
 	direction = Vector2.ZERO
 	
 	if Input.is_action_pressed("character_up"):
-		direction += Vector2(0, -1)
+		direction_input.emit(Vector2(0, -1))
 	if Input.is_action_pressed("character_down"):
-		direction += Vector2(0, 1)
+		direction_input.emit(Vector2(0, 1))
 	if Input.is_action_pressed("character_right"):
-		direction += Vector2(1, 0)
+		direction_input.emit(Vector2(1, 0))
 	if Input.is_action_pressed("character_left"):
-		direction += Vector2(-1, 0)
+		direction_input.emit(Vector2(-1, 0))
 	if Input.is_action_just_pressed("fire"):
 		player_shape.get_node("Turret").fire()
 		
@@ -39,7 +44,7 @@ func _process(_delta: float) -> void:
 	player_shape.get_node("Turret").turret_aiming_direction(angle)
 
 
-func form_loader():
+func form_loader() -> void:
 	if player_form == "square":
 		player_shape = square.instantiate()
 	if player_form == "triangle":

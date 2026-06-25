@@ -6,11 +6,11 @@ var can_fire: bool = true
 var bullet_scene: PackedScene = preload("res://scenes/bullet.tscn")
 
 
-func turret_aiming_direction(rotate_by):
+func turret_aiming_direction(rotate_by) -> void:
 	rotation = rotate_by
 
 
-func fire():
+func fire() -> void:
 	if can_fire:
 		get_node("ReloadTimer").start()
 		var turret_head: Vector2 = get_node("BulletSpawnPoint").global_position

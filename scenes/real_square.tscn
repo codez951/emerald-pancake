@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bwsefbcpogsma"]
+
+[ext_resource type="PackedScene" uid="uid://da0msg2erpcpy" path="res://scenes/character.tscn" id="1_vd48g"]
+[ext_resource type="Texture2D" uid="uid://cyvrj57sg3wcy" path="res://assets/textures/blue_square.png" id="2_1t33i"]
+[ext_resource type="Script" uid="uid://6yy8vf1uf1m8" path="res://scripts/real_square.gd" id="2_wyljm"]
+
+[node name="RealSquare" unique_id=604976356 instance=ExtResource("1_vd48g")]
+script = ExtResource("2_wyljm")
+
+[node name="Sprite2D" parent="." index="1" unique_id=1123475463]
+scale = Vector2(0.391, 0.403)
+texture = ExtResource("2_1t33i")
+
+[node name="HitBox" parent="." index="2" unique_id=950055553]
+polygon = PackedVector2Array(50, -53, 51, 53, -52, 53, -52, -53)
+
+[node name="Turret" parent="." index="3" unique_id=373752317]
+position = Vector2(0, -2)

@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://da0msg2erpcpy"]
 
 [ext_resource type="Script" uid="uid://dws7k4pleyhu7" path="res://scripts/generic_character.gd" id="1_agfs1"]
+[ext_resource type="PackedScene" uid="uid://cvc11vxewctbq" path="res://scenes/player_controller.tscn" id="2_rkhd4"]
+[ext_resource type="PackedScene" uid="uid://b3un88wpigo6n" path="res://scenes/turret.tscn" id="3_lrhn5"]
 
 [node name="GenericCharacter" type="CharacterBody2D" unique_id=604976356]
 script = ExtResource("1_agfs1")
+
+[node name="PlayerController" parent="." unique_id=347659636 instance=ExtResource("2_rkhd4")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1123475463]
+
+[node name="HitBox" type="CollisionPolygon2D" parent="." unique_id=950055553]
+
+[node name="Turret" parent="." unique_id=373752317 instance=ExtResource("3_lrhn5")]
+
+[connection signal="direction_input" from="PlayerController" to="." method="_on_player_controller_direction_input"]
